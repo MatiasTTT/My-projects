@@ -1,0 +1,557 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;font-family: 'Montserrat', sans-serif;
+}
+.header{
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(1,1,1,0.6),rgba(1,1,1,0.6)),url(images/back.jpg); /* muokkaa tausta värin tummuutta*/
+	background-position:center;
+	background-size:cover;
+	position:relative;
+	
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width:400px;
+	
+} /*nav img:llä voi muokata pikku logon kokoa*/
+.nav-links{
+	flex:1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style:none;
+	display:inline-block;
+	padding: 8px 12px;
+	position:relative;
+}
+.nav-links ul li a{
+	color:#fff;
+	text-decoration:none;
+	font-size:17px;
+}
+.nav-links ul li::after{
+	content: '';
+	width:0%;
+	height:2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+	width:100%;
+}
+.text-box{
+	width:90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.text-box h1{
+	font-size: 62px;
+}
+.text-box p{
+	margin: 10px 0 40px;
+	font-size:20px;
+	color: #fff;
+}
+.hero-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 20px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+.hero-btn:hover{
+	border: 1px solid #fff;
+	background: #f44336;
+	transition: 1s;
+}
+nav .fa{
+	display: none;
+}
+
+/*------- services (kohta 2 ekalla sivulla) -------*/
+
+.services{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+h1{
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.services p{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.course-col{
+	flex-basis: 31%;
+	background: #f44336;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+}
+.services h3{
+	text-align:center;
+	font-weight: 600;
+	margin: 10px 0;
+	font-size: 30px;
+	color: #fff;
+}
+.course-col:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+}
+
+/*----- "something" (kohta 3 ekalla sivulla) ---*/
+
+.something{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+.something-col{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+.something-col img{
+	width:100%;
+	display: block;
+}
+.something p{
+	color: #3d3d3d;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+.layer{
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+.layer:hover{
+	background: rgba(244,67,54,0.6);
+}
+.layer h3{
+	width: 100%;
+	font-weight: 500;
+	color: #fff;
+	font-size: 26px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position:absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+.layer:hover h3{
+	bottom: 49%;
+	opacity: 1;
+}
+
+/*----- "facilities" (kohta 4 ekalla sivulla) -----*/
+
+.facilities {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+.facilities-col{
+	flex-basis: 31%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+}
+.facilities-col img{
+	width: 100%;
+	border-radius: 10px;
+}
+.facilities-col p{
+	padding: 0;
+}
+.facilities-col h3{
+	margin-top: 16px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+.facilities-col ul{
+	padding: 5px;
+	margin-left: 15px;
+}
+/*------ "comments" (kohta 5 ekalla sivulla) -----*/
+
+.comments {
+	width: 80%;
+	margin: auto;
+	padding-top: 60px;
+	text-align: center;
+}
+.comments-col{
+	flex-basis: 44%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+	background: #404040;
+	padding: 25px;
+	cursor: pointer;
+	display: flex;
+}
+.comments-col h3{
+	color: #fff;
+	margin-top: 15px;
+	text-align: left;
+}
+.comments-col p{
+	color: #fff;
+	padding: 0;
+}
+.comments-col img{
+	height: 40px;
+	margin-left: 5px;
+	margin-right: 30px;
+	border-radius: 50%;
+}
+
+/*------ "cta" (kohta 6 ekalla sivulla) -----*/
+
+.cta{
+	margin: 100px;
+	width: 80%;
+	margin-left: auto;
+	margin-right:auto;
+	background-image: linear-gradient(rgba(1,1,1,0.6),rgba(1,1,1,0.6)),url(images/mic.jpg);
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+}
+.cta h1{
+	color:#fff;
+	margin-bottom: 40px;
+	padding: 0;
+}
+
+/*------ "footer" (kohta 6 ekalla sivulla) -----*/
+
+.footer{
+	width: 100%;
+	text-align: center;
+	padding:30px 0;
+}
+.footer h2{
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-weight: 600;
+	font-size:40px
+}
+.social{
+	margin: 40px;
+	margin-left: auto;
+	margin-right:auto;
+	width: 80%;
+	background-image: linear-gradient(rgba(1,1,1,0),rgba(1,1,1,0)), url(images/social.gif);
+	border-color:#1a1a1a;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px 0;
+	font-size:20px;
+	display: block;
+}
+.social p{
+	padding: 10px 0;
+	background-image: linear-gradient(rgba(1,1,1,0.7),rgba(1,1,1,0.7));
+	color: #fff;
+	border-radius: 10px;
+}
+.social a:link {
+	color: #fff;
+	text-decoration:none
+	
+}
+.social a:visited {
+	color: #fff;
+	text-decoration:none;
+}
+.social a:hover {
+	color:#f44336;
+	text-decoration:none;
+	
+}
+
+/*-------- Abut Us sivu -----------*/
+
+.sub-header{
+	height: 50vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(1,1,1,0.7),rgba(1,1,1,0.7)), url(images/hands.jpg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+.sub-header h1{
+	margin-top:100px;
+}
+.about-us{
+	width: 80%;
+	margin: auto;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+.about-col{
+	flex-basis: 48%;
+	padding: 30px 2px;
+}
+.about-col img{
+	width:100%;
+	border-radius: 10px;
+	
+}
+.about-col h1{
+	padding-top: 0;
+}
+.about-col p{
+	padding: 15px 0 25px;
+}
+
+.red-btn{
+	border: 1px solid #f44336;
+	background: transparent;
+	color: #f44336;
+}
+.red-btn:hover{
+	color:#fff;
+}
+.new1{
+	border: solid 1px;
+}
+.facilities-col a:link {
+	color: #000000;
+	
+}
+.facilities-col a:visited {
+	color: #878787;
+	text-decoration:none;
+}
+.facilities-col a:hover {
+	color:#f44336;
+	text-decoration:none;
+	
+}
+.sub-header1{
+	height: 50vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(1,1,1,0.7),rgba(1,1,1,0.7)), url(images/handshake.jpg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+
+/*-------- blogi sisältöä -----------*/
+
+.sub-header2{
+	height: 50vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(1,1,1,0.7),rgba(1,1,1,0.7)), url(images/book.jpeg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+.blog-content{
+	width: 80%;
+	margin: auto;
+	padding: 60px 0;
+}
+.blog-left{
+	flex-basis: 65%;
+}
+.blog-left img{
+	width: 100%;
+	border-radius: 10px;
+}
+.blog-left h2{
+	color: #222;
+	font-weight: 600;
+	margin: 30px 0;
+}
+.blog-left h3{
+	color: #222;
+	font-weight: 600;
+	margin: 30px 0;
+}
+.blog-left p{
+	color: #404040;
+	padding: 0;
+}
+.blog-right{
+	flex-basis: 32%;
+	padding-top: 33px;
+}
+.blog-right h3{
+	background: #f44336;
+	color: #fff;
+	padding: 7px 0;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.blog-right div{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #555;
+	padding: 8px;
+	box-sizing: border-box;
+}
+.comment-box{
+	border: 1px solid #ccc;
+	margin: 50px 0;
+	padding: 10px 20px;
+}
+.comment-box h3{
+	text-align: left;
+}
+.comment-form input, .comment-form textarea{
+	width:100%;
+	padding: 10px;
+	margin: 15px 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	background: #f0f0f0;
+}
+.comment-form button{
+	margin: 10px 0;
+}
+
+/*-------- contact sisältöä -----------*/
+
+.sub-header3{
+	height: 50vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(1,1,1,0.7),rgba(1,1,1,0.7)), url(images/mail.jpg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+.location{
+	width: 80%;
+	margin: auto;
+	padding: 80px 0;
+}
+.location iframe{
+	width: 100%;
+	border-radius: 10px;
+}
+.contact-us{
+	width: 80%;
+	margin: auto;
+}
+.contact-col{
+	flex-basis: 48%;
+	margin-bottom:30px;
+}
+.contact-col div{
+	align-items: center;
+	margin-bottom: 40px;
+}
+.contact-col div h3{
+	font-size: 28px;
+	color: #f44336;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-right: 30px;
+	font-weight: 600;
+}
+.contact-col div p{
+	padding: 0;
+	color: #555;
+}
+.contact-col div h5{
+	font-size: 20px;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+.contact-col input, .contact-col textarea{
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 17px;
+	outline: none;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.infotable{
+	width: 80%;
+	margin: auto;
+}
+.table{
+	text-align: center;
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	
+}
+.table th, .table td{
+	border: 1px solid #ccc;
+	padding: 5px;
+	width: 90%;
+}
+.table a:link {
+	color: #000000;
+	
+}
+.table a:visited {
+	color: #878787;
+	text-decoration:none;
+}
+.table a:hover {
+	color:#f44336;
+	text-decoration:none;
+}
